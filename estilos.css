@@ -1,0 +1,109 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #222; }
+header, footer { background: #ed7004; color: #fff; text-align: center; padding: 24px 16px; }
+nav a { color: #fff; margin: 0 10px; }
+main { max-width: 800px; margin: 0 auto; padding: 16px; }
+section { margin-bottom: 32px; }
+img { max-width: 100%; height: auto; border-radius: 50%; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+th { background: #eef2fb; }
+label { display: block; margin-top: 12px; font-weight: bold; }
+input, textarea { width: 100%; padding: 8px; }
+button { margin-top: 12px; padding: 10px 20px; background: #0b3d91; color: #fff; border: 0; cursor: pointer; }
+@media (min-width: 700px) { nav a { margin: 0 18px; } }
+/* ========================================================
+   CONTENEDOR PRINCIPAL: Pone los productos uno al lado del otro 
+   ======================================================== */
+.catalogo {
+  display: flex; /* Esto es lo que los alinea horizontalmente */
+  flex-wrap: wrap; /* Permite que pasen a la siguiente línea si la pantalla es pequeña */
+  gap: 20px; /* Espacio de separación entre cada producto */
+  justify-content: center; /* Centra todos los productos en la pantalla */
+  padding: 20px; /* Espacio alrededor de todo el catálogo */
+}
+
+/* ========================================================
+   DISEÑO DE CADA PRODUCTO: Crea el recuadro (tarjeta) 
+   ======================================================== */
+.tarjeta-producto {
+  border: 1px solid #ddd; /* Línea de borde gris clarito */
+  border-radius: 8px; /* Hace que las esquinas del recuadro sean redondeadas */
+  padding: 15px; /* Espacio interior para que el texto no pegue con el borde */
+  text-align: center; /* Centra el texto, los precios y la imagen adentro */
+  width: 200px; /* Tamaño fijo de ancho para cada tarjeta */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombreado sutil para que resalte como 3D */
+  background-color: white; /* Fondo blanco para la tarjeta */
+}
+
+/* ========================================================
+   DISEÑO DEL BOTÓN DE COMPRAR 
+   ======================================================== */
+.tarjeta-producto button {
+  background-color: #04ff10; /* Color azul del botón */
+  color: white; /* Color de la letra del botón */
+  border: none; /* Quita el borde negro que traen los botones por defecto */
+  padding: 10px; /* Hace el botón un poco más grueso y fácil de presionar */
+  border-radius: 5px; /* Esquinas redondeadas del botón */
+  cursor: pointer; /* Cambia la flechita por una manita al pasar el ratón */
+  margin-top: 10px; /* Separa el botón del texto del precio */
+}
+/* ========================================================
+   TAMAÑO UNIFORME PARA LAS FOTOS DE LOS PRODUCTOS
+   Obliga a que todas las imágenes midan exactamente lo mismo
+   ======================================================== */
+.tarjeta-producto img {
+  width: 150px; /* Define el ancho fijo para todas las fotos */
+  height: 150px; /* Define el alto fijo para nivelar las tarjetas */
+  object-fit: contain; /* Hace que la imagen encaje perfecto sin estirarse ni recortarse */
+  margin-bottom: 10px; /* Agrega un pequeño espacio entre la foto y el título del producto */
+}
+/* ========================================================
+   DISEÑO DEL BOTÓN DE WHATSAPP 
+   ======================================================== */
+.tarjeta-producto .boton-comprar {
+  display: inline-block;
+  background-color: #25D366; /* Verde característico de WhatsApp */
+  color: white;
+  text-decoration: none; /* Le quita la línea azul de abajo */
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* ========================================================
+   DISEÑO DEL BOTÓN PRINCIPAL (VER CATÁLOGO) EN EL INICIO
+   ======================================================== */
+.boton-catalogo {
+  display: inline-block;
+  background-color: #e76902; /* Color azul que combina con tu menú */
+  color: white; /* Letras blancas */
+  text-decoration: none; /* Quita la línea que traen los enlaces por defecto */
+  padding: 15px 40px; /* Lo hace más alto y ancho */
+  border-radius: 8px; /* Redondea las esquinas */
+  font-size: 20px; /* Hace la letra más grande */
+  font-weight: bold; /* Pone la letra un poco más gruesa (negrita) */
+  margin-top: 10px; /* Lo separa un poco del texto de arriba */
+}
+/* ========================================================
+   DISEÑO DE LA PORTADA GIGANTE (HERO SECTION)
+   ======================================================== */
+.portada-principal {
+  /* AQUÍ PONES EL NOMBRE DE TU FOTO. Asegúrate de que coincida con el archivo en tu carpeta img */
+  background-image: url('img/portada.jpg'); 
+  background-size: cover; /* Hace que la foto cubra todo el espacio sin deformarse */
+  background-position: top center; /* Centra la foto */
+  height: 100vh; /* Define qué tan alta será la portada */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 0 45px 1%;
+}
+
+.contenido-portada {
+  text-align: center;
+  color: white; /* Pone las letras en blanco como en Yanbal */
+  background-color: rgba(0, 0, 0, 0.6); /* Crea un fondo semi-transparente oscuro para que el texto se lea bien sobre cualquier foto */
+  padding: 35px;
+  border-radius: 10px;
+}
