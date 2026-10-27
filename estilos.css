@@ -1,95 +1,100 @@
-* { box-sizing: border-box; }
-body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #222; }
-header, footer { background: #ed7004; color: #fff; text-align: center; padding: 24px 16px; }
-nav a { color: #fff; margin: 0 10px; }
+/* ========================================================
+   CONFIGURACIÓN GENERAL Y LIMPIEZA DE MÁRGENES
+   ======================================================== */
+* { 
+  box-sizing: border-box; 
+}
+
+/* Evita que la pantalla se desborde hacia los lados y da el estilo base a las letras */
+html, body { 
+  margin: 0; 
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif; 
+  line-height: 1.6; 
+  color: #222; 
+}
+
+/* Hace que TODAS las imágenes se reduzcan automáticamente al ancho de la pantalla */
+img { 
+  max-width: 100%; 
+  height: auto; 
+}
+
+/* ========================================================
+   ENCABEZADO, NAVEGACIÓN Y PIE DE PÁGINA
+   ======================================================== */
+header, footer { 
+  background: #ed7004; 
+  color: #fff; 
+  text-align: center; 
+  padding: 15px 16px; 
+}
+
+/* Contenedor para alinear los logos a los lados del título */
+.header-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo-header {
+  height: 60px;
+  width: auto;
+  border-radius: 8px; /* Esquinas ligeramente redondeadas para los logos */
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+  font-size: 28px;
+}
+
+nav { 
+  margin-top: 10px; 
+}
+
+nav a { 
+  color: #fff; 
+  margin: 0 10px; 
+  text-decoration: none;
+}
+
+@media (min-width: 700px) { 
+  nav a { margin: 0 18px; } 
+}
+
+/* ========================================================
+   ESTRUCTURA PRINCIPAL Y FORMULARIOS
+   ======================================================== */
 main { max-width: 800px; margin: 0 auto; padding: 16px; }
 section { margin-bottom: 32px; }
-img { max-width: 100%; height: auto; border-radius: 50%; }
+
 table { border-collapse: collapse; width: 100%; }
 th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
 th { background: #eef2fb; }
+
 label { display: block; margin-top: 12px; font-weight: bold; }
 input, textarea { width: 100%; padding: 8px; }
-button { margin-top: 12px; padding: 10px 20px; background: #0b3d91; color: #fff; border: 0; cursor: pointer; }
-@media (min-width: 700px) { nav a { margin: 0 18px; } }
-/* ========================================================
-   CONTENEDOR PRINCIPAL: Pone los productos uno al lado del otro 
-   ======================================================== */
-.catalogo {
-  display: flex; /* Esto es lo que los alinea horizontalmente */
-  flex-wrap: wrap; /* Permite que pasen a la siguiente línea si la pantalla es pequeña */
-  gap: 20px; /* Espacio de separación entre cada producto */
-  justify-content: center; /* Centra todos los productos en la pantalla */
-  padding: 20px; /* Espacio alrededor de todo el catálogo */
+
+/* Botón genérico para formularios */
+button { 
+  margin-top: 12px; 
+  padding: 10px 20px; 
+  background: #0b3d91; 
+  color: #fff; 
+  border: 0; 
+  cursor: pointer; 
 }
 
-/* ========================================================
-   DISEÑO DE CADA PRODUCTO: Crea el recuadro (tarjeta) 
-   ======================================================== */
-.tarjeta-producto {
-  border: 1px solid #ddd; /* Línea de borde gris clarito */
-  border-radius: 8px; /* Hace que las esquinas del recuadro sean redondeadas */
-  padding: 15px; /* Espacio interior para que el texto no pegue con el borde */
-  text-align: center; /* Centra el texto, los precios y la imagen adentro */
-  width: 200px; /* Tamaño fijo de ancho para cada tarjeta */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombreado sutil para que resalte como 3D */
-  background-color: white; /* Fondo blanco para la tarjeta */
-}
-
-/* ========================================================
-   DISEÑO DEL BOTÓN DE COMPRAR 
-   ======================================================== */
-.tarjeta-producto button {
-  background-color: #04ff10; /* Color azul del botón */
-  color: white; /* Color de la letra del botón */
-  border: none; /* Quita el borde negro que traen los botones por defecto */
-  padding: 10px; /* Hace el botón un poco más grueso y fácil de presionar */
-  border-radius: 5px; /* Esquinas redondeadas del botón */
-  cursor: pointer; /* Cambia la flechita por una manita al pasar el ratón */
-  margin-top: 10px; /* Separa el botón del texto del precio */
-}
-/* ========================================================
-   TAMAÑO UNIFORME PARA LAS FOTOS DE LOS PRODUCTOS
-   Obliga a que todas las imágenes midan exactamente lo mismo
-   ======================================================== */
-.tarjeta-producto img {
-  width: 150px; /* Define el ancho fijo para todas las fotos */
-  height: 150px; /* Define el alto fijo para nivelar las tarjetas */
-  object-fit: contain; /* Hace que la imagen encaje perfecto sin estirarse ni recortarse */
-  margin-bottom: 10px; /* Agrega un pequeño espacio entre la foto y el título del producto */
-}
-/* ========================================================
-   DISEÑO DEL BOTÓN DE WHATSAPP 
-   ======================================================== */
-.tarjeta-producto .boton-comprar {
-  display: inline-block;
-  background-color: #25D366; /* Verde característico de WhatsApp */
-  color: white;
-  text-decoration: none; /* Le quita la línea azul de abajo */
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-  font-weight: bold;
-}
-/* ========================================================
-   DISEÑO DEL BOTÓN PRINCIPAL (VER CATÁLOGO) EN EL INICIO
-   ======================================================== */
-.boton-catalogo {
-  display: inline-block;
-  background-color: #e76902; /* Color azul que combina con tu menú */
-  color: white; /* Letras blancas */
-  text-decoration: none; /* Quita la línea que traen los enlaces por defecto */
-  padding: 15px 40px; /* Lo hace más alto y ancho */
-  border-radius: 8px; /* Redondea las esquinas */
-  font-size: 20px; /* Hace la letra más grande */
-  font-weight: bold; /* Pone la letra un poco más gruesa (negrita) */
-  margin-top: 10px; /* Lo separa un poco del texto de arriba */
-}
 /* ========================================================
    DISEÑO DE LA PORTADA GIGANTE (HERO SECTION)
    ======================================================== */
 .portada-principal {
-  /* AQUÍ PONES EL NOMBRE DE TU FOTO. Asegúrate de que coincida con el archivo en tu carpeta img */
+  /* Asegúrate de que coincida con el archivo en tu carpeta img */
   background-image: url('img/portada.jpg'); 
   background-size: cover; /* Hace que la foto cubra todo el espacio sin deformarse */
   background-position: top center; /* Centra la foto */
@@ -103,48 +108,128 @@ button { margin-top: 12px; padding: 10px 20px; background: #0b3d91; color: #fff;
 .contenido-portada {
   text-align: center;
   color: white; /* Pone las letras en blanco como en Yanbal */
-  background-color: rgba(0, 0, 0, 0.6); /* Crea un fondo semi-transparente oscuro para que el texto se lea bien sobre cualquier foto */
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro transparente para leer bien el texto */
   padding: 35px;
   border-radius: 10px;
 }
-/* --- REGLAS DE DISEÑO RESPONSIVO --- */
 
-/* 1. Hace que TODAS las imágenes se reduzcan automáticamente al ancho de la pantalla */
-img {
-  max-width: 100%;
-  height: auto;
+/* ========================================================
+   CATÁLOGO: CONTENEDOR PRINCIPAL 
+   Pone los productos uno al lado del otro 
+   ======================================================== */
+.catalogo {
+  display: flex; /* Esto es lo que los alinea horizontalmente */
+  flex-wrap: wrap; /* Permite que pasen a la siguiente línea si la pantalla es pequeña */
+  gap: 20px; /* Espacio de separación entre cada producto */
+  justify-content: center; /* Centra todos los productos en la pantalla */
+  padding: 20px; /* Espacio alrededor de todo el catálogo */
 }
 
-/* 2. Evita que la pantalla se desborde hacia los lados */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
+/* ========================================================
+   CATÁLOGO: DISEÑO DE CADA PRODUCTO (Tarjeta) 
+   ======================================================== */
+.tarjeta-producto {
+  border: 1px solid #ddd; /* Línea de borde gris clarito */
+  border-radius: 8px; /* Hace que las esquinas del recuadro sean redondeadas */
+  padding: 15px; /* Espacio interior para que el texto no pegue con el borde */
+  text-align: center; /* Centra el texto, los precios y la imagen adentro */
+  width: 200px; /* Tamaño fijo de ancho para cada tarjeta */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombreado sutil para que resalte como 3D */
+  background-color: white; /* Fondo blanco para la tarjeta */
 }
 
-/* 3. Reglas exclusivas para pantallas de celular (menos de 768px) */
+/* TAMAÑO UNIFORME PARA LAS FOTOS DE LOS PRODUCTOS */
+.tarjeta-producto img {
+  width: 150px; /* Define el ancho fijo para todas las fotos */
+  height: 150px; /* Define el alto fijo para nivelar las tarjetas */
+  object-fit: contain; /* Hace que la imagen encaje perfecto sin estirarse ni recortarse */
+  margin-bottom: 10px; /* Espacio entre foto y título */
+}
+
+/* DISEÑO DEL BOTÓN DE COMPRAR NORMAL */
+.tarjeta-producto button {
+  background-color: #04ff10; 
+  color: white; 
+  border: none; 
+  padding: 10px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  margin-top: 10px; 
+}
+
+/* DISEÑO DEL BOTÓN DE WHATSAPP */
+.tarjeta-producto .boton-comprar {
+  display: inline-block;
+  background-color: #25D366; /* Verde característico de WhatsApp */
+  color: white;
+  text-decoration: none; 
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ========================================================
+   DISEÑO DEL BOTÓN PRINCIPAL (VER CATÁLOGO) EN EL INICIO
+   ======================================================== */
+.boton-catalogo {
+  display: inline-block;
+  background-color: #e76902; 
+  color: white; 
+  text-decoration: none; 
+  padding: 15px 40px; 
+  border-radius: 8px; 
+  font-size: 20px; 
+  font-weight: bold; 
+  margin-top: 10px; 
+}
+
+/* ========================================================
+   DISEÑO RESPONSIVO (PANTALLAS DE CELULARES)
+   ======================================================== */
 @media (max-width: 768px) {
-  /* Ajusta el encabezado para que los logos y títulos no se aplasten */
-  header div {
-    flex-direction: column !important;
-    gap: 10px !important;
-    text-align: center;
+  
+  /* 1. Mantiene los dos logos a los lados y el título centrado */
+  .header-contenido {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100%;
+    padding: 0 5px;
   }
 
-  h1 {
-    font-size: 22px !important;
+  /* Ajusta el tamaño de los logos en celular */
+  .logo-header {
+    height: 40px !important; 
+    width: auto !important;
   }
 
-  /* Organiza el menú de navegación en vertical o centrado */
+  /* Ajusta el texto del título en celular */
+  header h1 {
+    font-size: 18px !important;
+  }
+
+  /* Organiza el menú de navegación para celular */
   nav {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 12px;
+    margin-top: 10px;
   }
 
   nav a {
-    font-size: 16px;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  /* 2. Hace que la imagen de portada se adapte completa sin recortarse */
+  .portada-principal {
+    background-size: contain !important; /* Muestra la imagen entera de borde a borde */
+    background-repeat: no-repeat;
+    height: 50vh; /* Baja la altura para que no quede un fondo negro vacío debajo */
+    align-items: center; /* Centra el texto de bienvenida */
+    padding: 20px;
   }
 }
