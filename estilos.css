@@ -107,3 +107,44 @@ button { margin-top: 12px; padding: 10px 20px; background: #0b3d91; color: #fff;
   padding: 35px;
   border-radius: 10px;
 }
+/* --- REGLAS DE DISEÑO RESPONSIVO --- */
+
+/* 1. Hace que TODAS las imágenes se reduzcan automáticamente al ancho de la pantalla */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 2. Evita que la pantalla se desborde hacia los lados */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Reglas exclusivas para pantallas de celular (menos de 768px) */
+@media (max-width: 768px) {
+  /* Ajusta el encabezado para que los logos y títulos no se aplasten */
+  header div {
+    flex-direction: column !important;
+    gap: 10px !important;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 22px !important;
+  }
+
+  /* Organiza el menú de navegación en vertical o centrado */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+}
