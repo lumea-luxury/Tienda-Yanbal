@@ -224,12 +224,37 @@ button {
     margin: 0;
   }
 
-  /* 2. Hace que la imagen de portada se adapte completa sin recortarse */
+ /* 2. Portada en celular: Recuadro pequeño a la izquierda y rostros libres */
   .portada-principal {
-    background-size: contain !important; /* Muestra la imagen entera de borde a borde */
-    background-repeat: no-repeat;
-    height: 50vh; /* Baja la altura para que no quede un fondo negro vacío debajo */
-    align-items: center; /* Centra el texto de bienvenida */
-    padding: 20px;
+    background-size: cover !important; 
+    background-position: 75% top !important; 
+    height: 70vh; 
+    align-items: flex-end !important; 
+    justify-content: flex-start !important; 
+    padding: 20px !important;
+  }
+
+  /* Achica el recuadro transparente para que no tape todo */
+  .contenido-portada {
+    width: 85% !important;
+    max-width: 280px !important;
+    padding: 15px !important;
+    text-align: left !important; 
+  }
+
+  .contenido-portada h2 {
+    font-size: 22px !important;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .contenido-portada p {
+    font-size: 14px !important;
+  }
+
+  .boton-catalogo {
+    font-size: 16px !important;
+    padding: 10px 15px !important;
+  }
   }
 }
