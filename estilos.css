@@ -183,6 +183,35 @@ button {
   font-weight: bold; 
   margin-top: 10px; 
 }
+ /* ========================================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ======================================================== */
+.boton-whatsapp-flotante {
+  position: fixed; /* Lo deja clavado en la pantalla aunque bajes o subas */
+  bottom: 20px; /* Distancia desde abajo */
+  right: 20px; /* Distancia desde la derecha */
+  background-color: #e76902; /* Naranja estilo Yanbal */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Lo hace completamente redondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para que parezca 3D */
+  z-index: 1000; /* Asegura que no lo tape ninguna otra imagen */
+  transition: transform 0.3s ease; /* Efecto suave */
+}
+
+/* Animación: se hace un poco más grande al pasar el mouse o tocarlo */
+.boton-whatsapp-flotante:hover {
+  transform: scale(1.1);
+}
+
+/* Tamaño exacto del ícono blanco por dentro */
+.boton-whatsapp-flotante svg {
+  width: 35px;
+  height: 35px;
+}
 
 /* ========================================================
    DISEÑO RESPONSIVO (PANTALLAS DE CELULARES)
