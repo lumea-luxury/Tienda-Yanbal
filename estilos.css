@@ -5,6 +5,11 @@
   box-sizing: border-box; 
 }
 
+html {
+  scroll-behavior: smooth; /* Hace que la pantalla se deslice suavemente al pulsar los enlaces */
+}
+
+
 /* Evita que la pantalla se desborde hacia los lados y da el estilo base a las letras */
 html, body { 
   margin: 0; 
