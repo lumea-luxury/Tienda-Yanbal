@@ -98,19 +98,20 @@ button {
   background-image: url('img/portada.jpg'); 
   background-size: cover; /* Hace que la foto cubra todo el espacio sin deformarse */
   background-position: top center; /* Centra la foto */
-  height: 100vh; /* Define qué tan alta será la portada */
+  min-height: 500px; /* Define una altura suficiente para que no se salga el cuadro */
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 0 0 45px 1%;
+  align-items: flex-end; /* Pega el recuadro negro en la parte inferior */
+  justify-content: flex-start; /* Alinea el recuadro a la izquierda */
+  padding: 30px; /* Margen de seguridad para que el cuadro no toque los bordes */
 }
 
 .contenido-portada {
   text-align: center;
   color: white; /* Pone las letras en blanco como en Yanbal */
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro transparente para leer bien el texto */
-  padding: 35px;
-  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente para leer bien el texto */
+  padding: 20px 25px; /* Espacio interior compacto para que no sobresalga por abajo */
+  border-radius: 10px; /* Redondea las esquinas del recuadro */
+  max-width: 300px; /* Limita el ancho para que la imagen se vea bien */
 }
 
 /* ========================================================
@@ -309,37 +310,30 @@ button {
     margin: 0;
   }
 
- /* 2. Portada en celular: Recuadro pequeño a la izquierda y rostros libres */
+/* 2. Ajuste de la portada en celular */
   .portada-principal {
-    background-size: cover !important; 
-    background-position: 75% top !important; 
-    height: 70vh; 
-    align-items: flex-end !important; 
-    justify-content: flex-start !important; 
-    padding: 20px !important;
+    height: 65vh !important; /* Altura adaptada para pantallas de celular */
+    min-height: 380px !important; /* Altura mínima para asegurar que quepa el cuadro */
+    padding: 15px !important; /* Margen reducido en celular */
   }
 
-  /* Achica el recuadro transparente para que no tape todo */
   .contenido-portada {
-    width: 85% !important;
-    max-width: 280px !important;
-    padding: 15px !important;
-    text-align: left !important; 
+    max-width: 230px !important; /* Ancho ajustado para pantallas angostas */
+    padding: 12px 15px !important; /* Relleno compacto para no tapar a los modelos */
   }
 
   .contenido-portada h2 {
-    font-size: 22px !important;
+    font-size: 17px !important; /* Título más pequeño para no ocupar tantas líneas */
     margin-top: 0 !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 6px !important;
   }
 
   .contenido-portada p {
-    font-size: 14px !important;
+    font-size: 12px !important; /* Texto explicativo compacto */
+    margin-bottom: 10px !important;
   }
 
   .boton-catalogo {
-    font-size: 16px !important;
-    padding: 10px 15px !important;
+    font-size: 13px !important; /* Botón ajustado a pantallas móviles */
+    padding: 8px 14px !important;
   }
-  }
-}
