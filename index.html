@@ -131,5 +131,38 @@
       }
     });
   </script>
+
+  <!-- SCRIPT PARA EL FUNCIONAMIENTO DEL CARRUSEL -->
+  <script>
+    let indexSlide = 0;
+    const containerSlides = document.getElementById('carruselSlides');
+    const puntos = document.querySelectorAll('.punto');
+    const totalSlides = puntos.length;
+
+    function mostrarSlide(n) {
+      indexSlide = n;
+      if (indexSlide >= totalSlides) indexSlide = 0;
+      if (indexSlide < 0) indexSlide = totalSlides - 1;
+
+      containerSlides.style.transform = `translateX(-${indexSlide * 100}%)`;
+
+      puntos.forEach(p => p.classList.remove('active'));
+      if (puntos[indexSlide]) {
+        puntos[indexSlide].classList.add('active');
+      }
+    }
+
+    function irASlide(n) {
+      mostrarSlide(n);
+    }
+
+    // Cambia la imagen automáticamente cada 4 segundos
+    setInterval(() => {
+      mostrarSlide(indexSlide + 1);
+    }, 4000);
+  </script>
+</body>
+
+
 </body>
 </html>
