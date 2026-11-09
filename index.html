@@ -33,14 +33,52 @@
        SECCIÓN DE BIENVENIDA (HERO SECTION) CON IMAGEN DE FONDO
        ======================================================== -->
  <main>
-    <!-- 1. PORTADA PRINCIPAL -->
-    <section class="portada-principal">
+   <!-- SECCIÓN DE PORTADA CON CARRUSEL DE FOTOS -->
+<section class="carrusel-container">
+  <div class="carrusel-slides" id="carruselSlides">
+    
+    <!-- Foto 1 (La imagen principal actual) -->
+    <div class="slide">
+      <img src="img/portada.jpg" alt="Fragancias Yanbal">
       <div class="contenido-portada">
         <h2>¡Bienvenido a nuestra Tienda!</h2>
         <p>Descubre las mejores fragancias y productos de Yanbal.</p>
         <a href="productos.html" class="boton-catalogo">Ver nuestro Catálogo</a>
       </div>
-    </section>
+    </div>
+
+    <!-- Foto 2 (Subirás esta foto a tu carpeta img) -->
+    <div class="slide">
+      <img src="img/portada2.jpg" alt="Joyería Yanbal">
+      <div class="contenido-portada">
+        <h2>Joyería Exclusiva</h2>
+        <p>Diseños elegantes de la más alta calidad.</p>
+        <a href="productos.html" class="boton-catalogo">Ver Joyería</a>
+      </div>
+    </div>
+
+    <!-- Foto 3 (Subirás esta foto a tu carpeta img) -->
+    <div class="slide">
+      <img src="img/portada3.jpg" alt="Cuidado Personal">
+      <div class="contenido-portada">
+        <h2>Cuidado Personal</h2>
+        <p>Lo mejor para tu rutina diaria de belleza.</p>
+        <a href="productos.html" class="boton-catalogo">Descubrir Más</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PUNTOS INDICADORES DE NAVEGACIÓN -->
+  <div class="carrusel-puntos">
+    <span class="punto active" onclick="irASlide(0)"></span>
+    <span class="punto" onclick="irASlide(1)"></span>
+    <span class="punto" onclick="irASlide(2)"></span>
+  </div>
+</section>
+
+
+
 
     <!-- 2. QUIÉNES SOMOS (Separado, justo debajo de la portada) -->
     <section id="quienes-somos" class="seccion-quienes-somos">
