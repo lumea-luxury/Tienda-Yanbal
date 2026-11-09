@@ -96,28 +96,72 @@ button {
 }
 
 /* ========================================================
-   DISEÑO DE LA PORTADA GIGANTE (HERO SECTION)
+   CARRUSEL DE PORTADA INTERACTIVO
    ======================================================== */
-.portada-principal {
-  /* Asegúrate de que coincida con el archivo en tu carpeta img */
-  background-image: url('img/portada.jpg'); 
-  background-size: cover; /* Hace que la foto cubra todo el espacio sin deformarse */
-  background-position: top center; /* Centra la foto */
-  min-height: 500px; /* Define una altura suficiente para que no se salga el cuadro */
-  display: flex;
-  align-items: flex-end; /* Pega el recuadro negro en la parte inferior */
-  justify-content: flex-start; /* Alinea el recuadro a la izquierda */
-  padding: 30px; /* Margen de seguridad para que el cuadro no toque los bordes */
+.carrusel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-.contenido-portada {
-  text-align: center;
-  color: white; /* Pone las letras en blanco como en Yanbal */
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente para leer bien el texto */
-  padding: 20px 25px; /* Espacio interior compacto para que no sobresalga por abajo */
-  border-radius: 10px; /* Redondea las esquinas del recuadro */
-  max-width: 300px; /* Limita el ancho para que la imagen se vea bien */
+.carrusel-slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
 }
+
+.slide {
+  min-width: 100%;
+  position: relative;
+  height: 500px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Recuadro de texto en el carrusel */
+.slide .contenido-portada {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 25px;
+  border-radius: 10px;
+  max-width: 300px;
+  z-index: 5;
+}
+
+/* Puntos blancos de navegación abajo */
+.carrusel-puntos {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.punto {
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.punto.active {
+  background-color: white;
+}
+
 
 /* ========================================================
    CATÁLOGO: CONTENEDOR PRINCIPAL 
