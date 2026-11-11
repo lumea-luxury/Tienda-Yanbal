@@ -95,12 +95,8 @@ button {
   cursor: pointer; 
 }
 
-/* ========================================================
-   CARRUSEL DE PORTADA INTERACTIVO
-   ======================================================== */
-/* ========================================================
-   CARRUSEL DE PORTADA (UNA SOLA FOTO A LA VEZ)
-   ======================================================== */
+
+  /* CARRUSEL DE PORTADA (UNA SOLA FOTO A LA VEZ) */
 .carrusel-container {
   position: relative;
   width: 100%;
