@@ -95,8 +95,8 @@ button {
   cursor: pointer; 
 }
 
-/* ========================================================
-   CARRUSEL DE PORTADA INTERACTIVO
+//* ========================================================
+   CARRUSEL DE PORTADA INTERACTIVO (BANNER COMPLETO)
    ======================================================== */
 .carrusel-container {
   position: relative;
@@ -112,43 +112,37 @@ button {
 
 .slide {
   min-width: 100%;
-  position: relative;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff; /* Mantiene el fondo blanco uniforme */
-  overflow: hidden;
+  position: relative; /* Permite que el texto se ubique ENCIMA de la foto */
+  height: 420px; /* Altura ideal de banner para computador */
 }
 
 .slide img {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center; /* Centra la imagen exactamente en el medio */
+  object-fit: cover; /* Cubre todo el espacio del banner */
+  object-position: center; /* Centra el contenido de la imagen */
   display: block;
-  margin: 0 auto;
 }
-s
 
-/* Recuadro de texto en el carrusel */
+/* Recuadro flotante transparente sobre la imagen */
 .slide .contenido-portada {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
-  text-align: center;
+  bottom: 35px;
+  left: 50px;
+  background-color: rgba(0, 0, 0, 0.65); /* Negro elegante semi-transparente */
   color: white;
-  background-color: rgba(0, 0, 0, 0.7);
   padding: 20px 25px;
-  border-radius: 10px;
-  max-width: 300px;
+  border-radius: 12px;
+  max-width: 320px;
+  text-align: left;
   z-index: 5;
+  backdrop-filter: blur(3px); /* Le da un toque suave de cristal */
 }
 
-/* Puntos blancos de navegación abajo */
+/* Puntos indicadores abajo */
 .carrusel-puntos {
   position: absolute;
-  bottom: 15px;
+  bottom: 12px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -169,6 +163,7 @@ s
 .punto.active {
   background-color: white;
 }
+
 
 
 /* ========================================================
