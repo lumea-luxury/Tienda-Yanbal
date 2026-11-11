@@ -114,16 +114,22 @@ button {
   min-width: 100%;
   position: relative;
   height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Mantiene el fondo blanco uniforme */
+  overflow: hidden;
 }
 
-..slide img {
-  width: 100%;
+.slide img {
+  max-width: 100%;
   height: 100%;
-  object-fit: contain; /* Muestra la foto entera sin cortar nada */
-  background-color: #ffffff; /* Fondo blanco para integrarse con la página */
+  object-fit: contain;
+  object-position: center; /* Centra la imagen exactamente en el medio */
   display: block;
+  margin: 0 auto;
 }
-
+s
 
 /* Recuadro de texto en el carrusel */
 .slide .contenido-portada {
