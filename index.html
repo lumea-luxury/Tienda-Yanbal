@@ -1,168 +1,169 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pagina principal de mis productos">
-  <title> Blanca Niño | Enprendedora Independiente</title>
-  <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
+<!DOCTYPE html> <!-- Indica al navegador que este documento está escrito en HTML5 -->
+<html lang="es"> <!-- Etiqueta raíz de toda la página; lang="es" indica que el idioma principal es español -->
+<head> <!-- Cabecera invisible de la página: contiene configuraciones, metadatos y enlaces a estilos -->
+  <meta charset="UTF-8"> <!-- Permite mostrar correctamente tildes, la letra ñ y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Hace que la página se adapte al ancho de celulares y tablets -->
+  <meta name="description" content="Pagina principal de mis productos"> <!-- Descripción breve de la página para buscadores como Google -->
+  <title> Blanca Niño | Enprendedora Independiente</title> <!-- Título que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="estilos.css"> <!-- Conecta este archivo HTML con la hoja de estilos CSS -->
+</head> <!-- Cierra la configuración de cabecera -->
+<body> <!-- Inicia todo el contenido visible de la página web -->
 
-<header>
-  <div class="header-contenido">
-    <img src="img/logo1.jpeg" alt="Logo Lumea" class="logo-header">
-    <h1>LUMEA LUXURY</h1>
-    <img src="img/logo2.jpeg" alt="Icono" class="logo-header">
-  </div>
-  <p>Tu Mundo, Tu Exencia</p>
+<header> <!-- Encabezado superior de la página (barra naranja) -->
+  <div class="header-contenido"> <!-- Caja contenedora para alinear los dos logos y el título en una fila -->
+    <img src="img/logo1.jpeg" alt="Logo Lumea" class="logo-header"> <!-- Muestra el logo izquierdo desde la carpeta img; alt es el texto alternativo -->
+    <h1>LUMEA LUXURY</h1> <!-- Título principal más importante de la página -->
+    <img src="img/logo2.jpeg" alt="Icono" class="logo-header"> <!-- Muestra el logo derecho desde la carpeta img -->
+  </div> <!-- Cierra el contenedor de logos y título -->
+  <p>Tu Mundo, Tu Exencia</p> <!-- Párrafo con el eslogan debajo del título principal -->
   
   <!-- MENÚ DE NAVEGACIÓN -->
-<nav>
-  <a href="index.html">Inicio</a>
-  <a href="index.html#quienes-somos">Quiénes Somos</a>
-  <a href="productos.html">Productos</a>
-</nav>
-</header>
+<nav> <!-- Contenedor semántico para los enlaces principales de navegación -->
+  <a href="index.html">Inicio</a> <!-- Enlace que recarga o lleva a la página principal -->
+  <a href="index.html#quienes-somos">Quiénes Somos</a> <!-- Enlace tipo ancla (#) que baja hasta la sección con id="quienes-somos" -->
+  <a href="productos.html">Productos</a> <!-- Enlace que abre la página del catálogo de productos -->
+</nav> <!-- Cierra el menú de navegación -->
+</header> <!-- Cierra el encabezado superior -->
   
 <!-- ========================================================
        TÍTULO PRINCIPAL DE LA MARCA
        ======================================================== -->
-  <h2 style="text-align: center; font-size: 40px; letter-spacing: 5px; margin: 20px 0; color: #333;">YANBAL</h2>
+  <h2 style="text-align: center; font-size: 40px; letter-spacing: 5px; margin: 20px 0; color: #333;">YANBAL</h2> <!-- Subtítulo con estilos en línea (centrado, tamaño 40px, letras separadas 5px y gris oscuro) -->
 <!-- ========================================================
        SECCIÓN DE BIENVENIDA (HERO SECTION) CON IMAGEN DE FONDO
        ======================================================== -->
- <main>
+ <main> <!-- Contenedor principal del contenido central de la página -->
    <!-- SECCIÓN DE PORTADA CON CARRUSEL DE FOTOS -->
-<section class="carrusel-container">
-  <div class="carrusel-slides" id="carruselSlides">
+<section class="carrusel-container"> <!-- Sección que encierra todo el carrusel de portada -->
+  <div class="carrusel-slides" id="carruselSlides"> <!-- Pista horizontal que mueve las diapositivas; tiene id para controlarla con JavaScript -->
     
     <!-- Foto 1 (La imagen principal actual) -->
-    <div class="slide">
-      <img src="img/portada.jpg" alt="Fragancias Yanbal">
-      <div class="contenido-portada">
-        <h2>¡Bienvenido a nuestra Tienda!</h2>
-        <p>Descubre las mejores fragancias y productos de Yanbal.</p>
-        <a href="productos.html" class="boton-catalogo">Ver nuestro Catálogo</a>
-      </div>
-    </div>
+    <div class="slide"> <!-- Primera diapositiva del carrusel -->
+      <img src="img/portada.jpg" alt="Fragancias Yanbal"> <!-- Imagen de fondo de la primera diapositiva -->
+      <div class="contenido-portada"> <!-- Recuadro oscuro flotante encima de la imagen -->
+        <h2>¡Bienvenido a nuestra Tienda!</h2> <!-- Título dentro del recuadro de bienvenida -->
+        <p>Descubre las mejores fragancias y productos de Yanbal.</p> <!-- Texto descriptivo de bienvenida -->
+        <a href="productos.html" class="boton-catalogo">Ver nuestro Catálogo</a> <!-- Enlace con apariencia de botón naranja que lleva al catálogo -->
+      </div> <!-- Cierra el recuadro flotante -->
+    </div> <!-- Cierra la diapositiva 1 -->
 
     <!-- Foto 2 (Subirás esta foto a tu carpeta img) -->
-    <div class="slide">
-      <img src="img/portada2.jpg" alt="Joyería Yanbal">
-      <div class="contenido-portada">
-        <h2>Joyería Exclusiva</h2>
-        <p>Diseños elegantes de la más alta calidad.</p>
-        <a href="productos.html" class="boton-catalogo">Ver Joyería</a>
-      </div>
-    </div>
+    <div class="slide"> <!-- Segunda diapositiva del carrusel -->
+      <img src="img/portada2.jpg" alt="Joyería Yanbal"> <!-- Imagen de fondo de la segunda diapositiva -->
+      <div class="contenido-portada"> <!-- Recuadro oscuro flotante encima de la segunda foto -->
+        <h2>Joyería Exclusiva</h2> <!-- Título de la diapositiva 2 -->
+        <p>Diseños elegantes de la más alta calidad.</p> <!-- Texto descriptivo de la diapositiva 2 -->
+        <a href="productos.html" class="boton-catalogo">Ver Joyería</a> <!-- Botón que lleva a la página de productos -->
+      </div> <!-- Cierra el recuadro flotante -->
+    </div> <!-- Cierra la diapositiva 2 -->
 
     <!-- Foto 3 (Subirás esta foto a tu carpeta img) -->
-    <div class="slide">
-      <img src="img/portada3.jpg" alt="Cuidado Personal">
-      <div class="contenido-portada">
-        <h2>Cuidado Personal</h2>
-        <p>Lo mejor para tu rutina diaria de belleza.</p>
-        <a href="productos.html" class="boton-catalogo">Descubrir Más</a>
-      </div>
-    </div>
+    <div class="slide"> <!-- Tercera diapositiva del carrusel -->
+      <img src="img/portada3.jpg" alt="Cuidado Personal"> <!-- Imagen de fondo de la tercera diapositiva -->
+      <div class="contenido-portada"> <!-- Recuadro oscuro flotante encima de la tercera foto -->
+        <h2>Cuidado Personal</h2> <!-- Título de la diapositiva 3 -->
+        <p>Lo mejor para tu rutina diaria de belleza.</p> <!-- Texto descriptivo de la diapositiva 3 -->
+        <a href="productos.html" class="boton-catalogo">Descubrir Más</a> <!-- Botón que lleva a la página de productos -->
+      </div> <!-- Cierra el recuadro flotante -->
+    </div> <!-- Cierra la diapositiva 3 -->
 
-  </div>
+  </div> <!-- Cierra la pista de diapositivas -->
 
   <!-- PUNTOS INDICADORES DE NAVEGACIÓN -->
-  <div class="carrusel-puntos">
-    <span class="punto active" onclick="irASlide(0)"></span>
-    <span class="punto" onclick="irASlide(1)"></span>
-    <span class="punto" onclick="irASlide(2)"></span>
-  </div>
-</section>
+  <div class="carrusel-puntos"> <!-- Contenedor de los 3 puntos indicadores en la parte inferior -->
+    <span class="punto active" onclick="irASlide(0)"></span> <!-- Punto 1 (activo al inicio); al hacer clic llama a la función JS irASlide(0) -->
+    <span class="punto" onclick="irASlide(1)"></span> <!-- Punto 2; al hacer clic muestra la segunda imagen (posición 1) -->
+    <span class="punto" onclick="irASlide(2)"></span> <!-- Punto 3; al hacer clic muestra la tercera imagen (posición 2) -->
+  </div> <!-- Cierra los puntos indicadores -->
+</section> <!-- Cierra la sección del carrusel -->
 
 
 
 
     <!-- 2. QUIÉNES SOMOS (Separado, justo debajo de la portada) -->
-    <section id="quienes-somos" class="seccion-quienes-somos">
-      <h2>Quiénes Somos</h2>
-      <p class="descripcion-quienes-somos">
+    <section id="quienes-somos" class="seccion-quienes-somos"> <!-- Sección con id="quienes-somos" para que el menú pueda saltar hasta aquí -->
+      <h2>Quiénes Somos</h2> <!-- Título de la sección -->
+      <p class="descripcion-quienes-somos"> <!-- Párrafo de presentación; <strong> resalta "Lumea Luxury" en negrita -->
         En <strong>Lumea Luxury</strong> somos distribuidores autorizados de Yanbal. Nos apasiona ofrecerte las mejores fragancias, productos de cuidado personal y joyería de la más alta calidad, pensados para resaltar tu estilo único y elegancia.
       </p>
 
-      <div class="mision-vision-grid">
-        <div class="tarjeta-mv">
-          <h3>Nuestra Misión</h3>
-          <p>Promover la belleza y el bienestar a través de productos exclusivos, brindándote una experiencia de compra confiable, rápida y personalizada.</p>
-        </div>
-        <div class="tarjeta-mv">
-          <h3>Nuestra Visión</h3>
-          <p>Ser tu tienda de preferencia en productos Yanbal, reconocida por la autenticidad, calidad y excelente atención a nuestros clientes.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+      <div class="mision-vision-grid"> <!-- Contenedor flexible que pone Misión y Visión lado a lado -->
+        <div class="tarjeta-mv"> <!-- Tarjeta individual para la Misión -->
+          <h3>Nuestra Misión</h3> <!-- Subtítulo de la tarjeta Misión -->
+          <p>Promover la belleza y el bienestar a través de productos exclusivos, brindándote una experiencia de compra confiable, rápida y personalizada.</p> <!-- Texto de la Misión -->
+        </div> <!-- Cierra tarjeta Misión -->
+        <div class="tarjeta-mv"> <!-- Tarjeta individual para la Visión -->
+          <h3>Nuestra Visión</h3> <!-- Subtítulo de la tarjeta Visión -->
+          <p>Ser tu tienda de preferencia en productos Yanbal, reconocida por la autenticidad, calidad y excelente atención a nuestros clientes.</p> <!-- Texto de la Visión -->
+        </div> <!-- Cierra tarjeta Visión -->
+      </div> <!-- Cierra el contenedor de Misión y Visión -->
+    </section> <!-- Cierra la sección Quiénes Somos -->
+  </main> <!-- Cierra el contenido principal -->
 
 <!-- ========================================================
        PIE DE PÁGINA (FOOTER): Información legal y de contacto
        ======================================================== -->
-  <footer>
-    <p><strong>Distribuidor Autorizado De Yanbal</strong></p>
-    <p> Ubicados en: CL 23 A 38 ESTE 16 MZ 2 CA 2 Rincon De La Maria, Villavicencio, Meta</p>
-    <p> WhatsApp: +57 320 835 7694 |  Instagram: @ninoblancaruth</p>
-    <p>&copy; Blanca Niño · <a href="mailto:ana@correo.com">ivanramroruiz02@gmail.com</a></p>
-    <p>&copy; 2026 Todos los derechos reservados.</p>
-  </footer>
+  <footer> <!-- Pie de página inferior con datos de contacto -->
+    <p><strong>Distribuidor Autorizado De Yanbal</strong></p> <!-- Texto destacado en negrita -->
+    <p> Ubicados en: CL 23 A 38 ESTE 16 MZ 2 CA 2 Rincon De La Maria, Villavicencio, Meta</p> <!-- Dirección física -->
+    <p> WhatsApp: +57 320 835 7694 |  Instagram: @ninoblancaruth</p> <!-- Datos de contacto y redes -->
+    <p>&copy; Blanca Niño · <a href="mailto:ana@correo.com">ivanramroruiz02@gmail.com</a></p> <!-- Símbolo de copyright (&copy;) y enlace mailto para abrir el correo -->
+    <p>&copy; 2026 Todos los derechos reservados.</p> <!-- Aviso de derechos reservados -->
+  </footer> <!-- Cierra el pie de página -->
   
    <!-- BOTÓN FLOTANTE DE WHATSAPP imagen vectorial (coordenadas matematicas ponto x, y) -->
-  <a href="https://wa.me/573144445281?text=¡Hola!%20Me%20gustaría%20recibir%20más%20información%20sobre%20los%20productos%20de%20Lumea%20Luxury." class="boton-whatsapp-flotante" target="_blank">
+  <a href="https://wa.me/573144445281?text=¡Hola!%20Me%20gustaría%20recibir%20más%20información%20sobre%20los%20productos%20de%20Lumea%20Luxury." class="boton-whatsapp-flotante" target="_blank"> <!-- Enlace directo a la API de WhatsApp con mensaje predefinido; target="_blank" lo abre en una pestaña nueva -->
     <!-- Este es el código del ícono de WhatsApp en color blanco -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="white">
-      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.3l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-    </svg>
-  </a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="white"> <!-- Gráfico vectorial (SVG) que dibuja el logo de WhatsApp en blanco sin pixelarse -->
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.3l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/> <!-- Coordenadas matemáticas que trazan la silueta del teléfono y burbuja de WhatsApp -->
+    </svg> <!-- Cierra el gráfico vectorial -->
+  </a> <!-- Cierra el botón flotante de WhatsApp -->
   <!-- SCRIPT PARA FORZAR EL SALTO A "QUIÉNES SOMOS" EN CELULARES -->
-  <script>
-    window.addEventListener('load', function() {
-      if (window.location.hash === '#quienes-somos') {
-        setTimeout(function() {
-          const seccion = document.getElementById('quienes-somos');
-          if (seccion) {
-            seccion.scrollIntoView({ behavior: 'smooth' });
+  <script> // Inicia bloque de código JavaScript
+    window.addEventListener('load', function() { // Espera a que toda la página y sus imágenes terminen de cargar
+      if (window.location.hash === '#quienes-somos') { // Verifica si la dirección URL termina en #quienes-somos
+        setTimeout(function() { // Espera un breve tiempo antes de ejecutar el desplazamiento
+          const seccion = document.getElementById('quienes-somos'); // Busca en el HTML la sección con id="quienes-somos"
+          if (seccion) { // Comprueba que la sección exista
+            seccion.scrollIntoView({ behavior: 'smooth' }); // Desliza la pantalla suavemente hasta esa sección
           }
         }, 300); // Espera 300ms a que la imagen de portada se ubique en el celular
       }
-    });
-  </script>
+    }); // Cierra el evento de carga
+  </script> <!-- Cierra el primer script -->
 
   <!-- SCRIPT PARA EL FUNCIONAMIENTO DEL CARRUSEL -->
-  <script>
-    let indexSlide = 0;
-    const containerSlides = document.getElementById('carruselSlides');
-    const puntos = document.querySelectorAll('.punto');
-    const totalSlides = puntos.length;
+  <script> // Inicia el código JavaScript que controla el movimiento del carrusel
+    let indexSlide = 0; // Variable que guarda el número de la foto actual (empieza en 0 = Foto 1)
+    const containerSlides = document.getElementById('carruselSlides'); // Captura el contenedor que mueve todas las fotos
+    const puntos = document.querySelectorAll('.punto'); // Captura todos los puntos indicadores en una lista
+    const totalSlides = puntos.length; // Cuenta cuántas diapositivas hay en total (3)
 
-    function mostrarSlide(n) {
-      indexSlide = n;
-      if (indexSlide >= totalSlides) indexSlide = 0;
-      if (indexSlide < 0) indexSlide = totalSlides - 1;
+    function mostrarSlide(n) { // Función principal que cambia a la diapositiva número "n"
+      indexSlide = n; // Actualiza el índice de la foto actual
+      if (indexSlide >= totalSlides) indexSlide = 0; // Si pasa de la última foto, vuelve a empezar en la primera (0)
+      if (indexSlide < 0) indexSlide = totalSlides - 1; // Si retrocede antes de la primera, salta a la última
 
-      containerSlides.style.transform = `translateX(-${indexSlide * 100}%)`;
+      containerSlides.style.transform = `translateX(-${indexSlide * 100}%)`; // Mueve las fotos hacia la izquierda multiplicando el índice por 100%
 
-      puntos.forEach(p => p.classList.remove('active'));
-      if (puntos[indexSlide]) {
-        puntos[indexSlide].classList.add('active');
+      puntos.forEach(p => p.classList.remove('active')); // Quita el color blanco activo a todos los puntos
+      if (puntos[indexSlide]) { // Verifica que exista el punto correspondiente a la foto actual
+        puntos[indexSlide].classList.add('active'); // Pinta de blanco activo solo el punto de la foto visible
       }
-    }
+    } // Cierra la función mostrarSlide
 
-    function irASlide(n) {
-      mostrarSlide(n);
-    }
+    function irASlide(n) { // Función que se ejecuta al hacer clic manualmente en uno de los puntos
+      mostrarSlide(n); // Llama a mostrarSlide para ir directo a esa foto
+    } // Cierra la función irASlide
 
     // Cambia la imagen automáticamente cada 4 segundos
-    setInterval(() => {
-      mostrarSlide(indexSlide + 1);
-    }, 4000);
-  </script>
-</body>
+    setInterval(() => { // Temporizador que repite una acción cada cierto tiempo
+      mostrarSlide(indexSlide + 1); // Avanza automáticamente a la siguiente foto
+    }, 4000); // 4000 milisegundos = 4 segundos
+  </script> <!-- Cierra el script del carrusel -->
+</body> <!-- Cierra el cuerpo de la página -->
 
 
-</body>
-</html>
+</body> <!-- Cierre extra del cuerpo de la página -->
+</html> <!-- Cierra todo el documento HTML -->
+2
