@@ -1,114 +1,114 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo de Productos | Tienda Online</title>
-  <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
+<!DOCTYPE html> <!-- Indica al navegador que este documento está escrito en HTML5 -->
+<html lang="es"> <!-- Etiqueta raíz de toda la página; lang="es" indica que el idioma principal es español -->
+<head> <!-- Cabecera invisible de la página: contiene configuraciones, título y conexión a estilos -->
+  <meta charset="UTF-8"> <!-- Permite mostrar correctamente tildes, la letra ñ y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página se adapte al ancho de celulares y tablets -->
+  <title>Catálogo de Productos | Tienda Online</title> <!-- Título que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="estilos.css"> <!-- Conecta este archivo HTML con la misma hoja de estilos CSS -->
+</head> <!-- Cierra la configuración de cabecera -->
+<body> <!-- Inicia todo el contenido visible de la página web -->
 
   <!-- ENCABEZADO Y MENÚ -->
-  <header>
-  <div class="header-contenido">
-    <img src="img/logo1.jpeg" alt="Logo Lumea" class="logo-header">
-    <h1>LUMEA LUXURY</h1>
-    <img src="img/logo2.jpeg" alt="Icono" class="logo-header">
-  </div>
-    <p>Tu Mundo, Tu Esencia</p>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="index.html#quienes-somos">Quiénes Somos</a>
-      <a href="productos.html">Productos</a>
-    </nav>
-  </header>
+  <header> <!-- Encabezado superior naranja idéntico al inicio para mantener coherencia visual -->
+  <div class="header-contenido"> <!-- Caja contenedora (Flexbox) que alinea los dos logos y el título en fila -->
+    <img src="img/logo1.jpeg" alt="Logo Lumea" class="logo-header"> <!-- Muestra el logo izquierdo desde la carpeta img -->
+    <h1>LUMEA LUXURY</h1> <!-- Título principal de la tienda -->
+    <img src="img/logo2.jpeg" alt="Icono" class="logo-header"> <!-- Muestra el logo derecho desde la carpeta img -->
+  </div> <!-- Cierra el contenedor de logos y título -->
+    <p>Tu Mundo, Tu Esencia</p> <!-- Párrafo con el eslogan de la tienda -->
+    <nav> <!-- Barra de navegación principal -->
+      <a href="index.html">Inicio</a> <!-- Enlace para volver a la página principal -->
+      <a href="index.html#quienes-somos">Quiénes Somos</a> <!-- Enlace que regresa al inicio y baja directo a la sección #quienes-somos -->
+      <a href="productos.html">Productos</a> <!-- Enlace a esta misma página del catálogo -->
+    </nav> <!-- Cierra el menú de navegación -->
+  </header> <!-- Cierra el encabezado superior -->
 
-    <h2 style="text-align: center; font-size: 40px; letter-spacing: 5px; margin: 20px 0; color: #333;">YANBAL</h2>
+    <h2 style="text-align: center; font-size: 40px; letter-spacing: 5px; margin: 20px 0; color: #333;">YANBAL</h2> <!-- Subtítulo de marca con estilos en línea (centrado, 40px, letras separadas 5px y gris oscuro) -->
 
   <!-- CATÁLOGO DE PRODUCTOS -->
-  <main>
-    <section id="productos">
-      <h2 style="text-align: center; margin-top: 20px;">Nuestro Catálogo Completo</h2>
+  <main> <!-- Contenedor principal del contenido central -->
+    <section id="productos"> <!-- Sección semántica que agrupa todo el catálogo -->
+      <h2 style="text-align: center; margin-top: 20px;">Nuestro Catálogo Completo</h2> <!-- Título centrado del catálogo -->
       
-      <div class="catalogo">
+      <div class="catalogo"> <!-- Contenedor Flexbox que organiza las tarjetas una al lado de la otra y las baja de fila si no caben -->
         <!-- Producto 1 -->
-        <article class="tarjeta-producto">
-          <img src="img/producto1.jpg" alt="Perfume OHM" width="150">
-          <h3>OHM</h3>
-          <p>Aroma herbal fresco con vibrantes notas de toronja y silva (100 ml).</p>
-          <p><strong>$122.000 COP</strong></p>
+        <article class="tarjeta-producto"> <!-- Tarjeta semántica individual para el primer producto -->
+          <img src="img/producto1.jpg" alt="Perfume OHM" width="150"> <!-- Imagen del perfume OHM desde la carpeta img -->
+          <h3>OHM</h3> <!-- Nombre del producto -->
+          <p>Aroma herbal fresco con vibrantes notas de toronja y silva (100 ml).</p> <!-- Descripción olfativa y presentación -->
+          <p><strong>$122.000 COP</strong></p> <!-- Precio resaltado en negrita con la etiqueta <strong> -->
           <!-- BOTÓN DE WHATSAPP -->
-          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20OHM" target="_blank" class="boton-comprar">Comprar</a>
-        </article>
+          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20OHM" target="_blank" class="boton-comprar">Comprar</a> <!-- Enlace a la API de WhatsApp con mensaje personalizado para este perfume; target="_blank" abre una pestaña nueva -->
+        </article> <!-- Cierra tarjeta del Producto 1 -->
 
         <!-- Producto 2 -->
-        <article class="tarjeta-producto">
-          <img src="img/producto2.jpg" alt="Perfume Temptation" width="150">
-          <h3>Temptation</h3>
-          <p>Seducción floral intensa con elegantes notas de rosa y gardenia (100 ml).</p>
-          <p><strong>$80.000 COP</strong></p>
+        <article class="tarjeta-producto"> <!-- Tarjeta individual para el segundo producto -->
+          <img src="img/producto2.jpg" alt="Perfume Temptation" width="150"> <!-- Imagen del perfume Temptation -->
+          <h3>Temptation</h3> <!-- Nombre del producto -->
+          <p>Seducción floral intensa con elegantes notas de rosa y gardenia (100 ml).</p> <!-- Descripción del aroma y mililitros -->
+          <p><strong>$80.000 COP</strong></p> <!-- Precio en negrita -->
           <!-- BOTÓN DE WHATSAPP -->
-          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20Temptation" target="_blank" class="boton-comprar">Comprar</a>
-        </article>
+          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20Temptation" target="_blank" class="boton-comprar">Comprar</a> <!-- Botón que envía mensaje directo por WhatsApp pidiendo Temptation -->
+        </article> <!-- Cierra tarjeta del Producto 2 -->
 
         <!-- Producto 3-->
-        <article class="tarjeta-producto">
-          <img src="img/producto3.jpg" alt=" Perfume ccori width="150">
-          <h3> CCORI </h3>
-          <p>Sotisficado aroma oriental con notas de rosas, canela y ámbar (50 ml).</p>
-          <p><strong>$108.500 COP</strong></p>
+        <article class="tarjeta-producto"> <!-- Tarjeta individual para el tercer producto -->
+          <img src="img/producto3.jpg" alt=" Perfume ccori width="150"> <!-- Imagen del perfume CCORI -->
+          <h3> CCORI </h3> <!-- Nombre del producto -->
+          <p>Sotisficado aroma oriental con notas de rosas, canela y ámbar (50 ml).</p> <!-- Descripción olfativa y tamaño -->
+          <p><strong>$108.500 COP</strong></p> <!-- Precio en negrita -->
           <!-- BOTÓN DE WHATSAPP -->
-          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20CCORI" target="_blank" class="boton-comprar">Comprar</a>
-        </article>
+          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20CCORI" target="_blank" class="boton-comprar">Comprar</a> <!-- Botón de WhatsApp personalizado para CCORI -->
+        </article> <!-- Cierra tarjeta del Producto 3 -->
 
          <!-- Producto 4-->
-        <article class="tarjeta-producto">
-          <img src="img/producto4.jpg" alt=" Perfume zentro privé width="150">
-          <h3> ZENTRO PRIVÉ </h3>
-          <p>Carácter e intensidad con elegantes notas de madera, tabaco y ámbar (75 ml).</p>
-          <p><strong>$114.000 COP</strong></p>
+        <article class="tarjeta-producto"> <!-- Tarjeta individual para el cuarto producto -->
+          <img src="img/producto4.jpg" alt=" Perfume zentro privé width="150"> <!-- Imagen del perfume Zentro Privé -->
+          <h3> ZENTRO PRIVÉ </h3> <!-- Nombre del producto -->
+          <p>Carácter e intensidad con elegantes notas de madera, tabaco y ámbar (75 ml).</p> <!-- Descripción olfativa y tamaño -->
+          <p><strong>$114.000 COP</strong></p> <!-- Precio en negrita -->
           <!-- BOTÓN DE WHATSAPP -->
-          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20ZETRO%20PRIVÉ" target="_blank" class="boton-comprar">Comprar</a>
-        </article>
+          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20ZETRO%20PRIVÉ" target="_blank" class="boton-comprar">Comprar</a> <!-- Botón de WhatsApp personalizado para Zentro Privé -->
+        </article> <!-- Cierra tarjeta del Producto 4 -->
 
          <!-- Producto 5-->
-        <article class="tarjeta-producto">
-          <img src="img/producto5.jpg" alt=" Perfume Di Que Sí width="150">
-          <h3> DI QUE SÍ </h3>
-          <p>Aroma floral fresco con chispeantes notas de manzana verde, limón y jazmín (50 ml).</p>
-          <p><strong>$70.000 COP</strong></p>
+        <article class="tarjeta-producto"> <!-- Tarjeta individual para el quinto producto -->
+          <img src="img/producto5.jpg" alt=" Perfume Di Que Sí width="150"> <!-- Imagen del perfume Di Que Sí -->
+          <h3> DI QUE SÍ </h3> <!-- Nombre del producto -->
+          <p>Aroma floral fresco con chispeantes notas de manzana verde, limón y jazmín (50 ml).</p> <!-- Descripción olfativa y tamaño -->
+          <p><strong>$70.000 COP</strong></p> <!-- Precio en negrita -->
           <!-- BOTÓN DE WHATSAPP -->
-          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20%DI%20QUE%20SÍ" target="_blank" class="boton-comprar">Comprar</a>
-        </article>
+          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20%DI%20QUE%20SÍ" target="_blank" class="boton-comprar">Comprar</a> <!-- Botón de WhatsApp personalizado para Di Que Sí -->
+        </article> <!-- Cierra tarjeta del Producto 5 -->
 
          <!-- Producto 6-->
-        <article class="tarjeta-producto">
-          <img src="img/producto6.jpg" alt=" Perfume Di Que Sí width="150">
-          <h3> TEMPTATION </h3>
-          <p>Aroma floral especiado e irresistinle con apasoniadas notas de Bulgaria y gardenia (50 ml).</p>
-          <p><strong>$90.000 COP</strong></p>
+        <article class="tarjeta-producto"> <!-- Tarjeta individual para el sexto producto -->
+          <img src="img/producto6.jpg" alt=" Perfume Di Que Sí width="150"> <!-- Imagen del perfume Temptation de dama -->
+          <h3> TEMPTATION </h3> <!-- Nombre del producto -->
+          <p>Aroma floral especiado e irresistinle con apasoniadas notas de Bulgaria y gardenia (50 ml).</p> <!-- Descripción olfativa y tamaño -->
+          <p><strong>$90.000 COP</strong></p> <!-- Precio en negrita -->
           <!-- BOTÓN DE WHATSAPP -->
-          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20%TEMPTATION%20DE%20DAMA" target="_blank" class="boton-comprar">Comprar</a>
-        </article>
-      </div>
-    </section>
-  </main>
+          <a href="https://wa.me/573144445281?text=Hola,%20me%20interesa%20comprar%20el%20perfume%20%TEMPTATION%20DE%20DAMA" target="_blank" class="boton-comprar">Comprar</a> <!-- Botón de WhatsApp personalizado para Temptation de dama -->
+        </article> <!-- Cierra tarjeta del Producto 6 -->
+      </div> <!-- Cierra el contenedor Flexbox de todo el catálogo -->
+    </section> <!-- Cierra la sección de productos -->
+  </main> <!-- Cierra el contenido principal -->
 
   <!-- PIE DE PÁGINA -->
-  <footer>
-    <p><strong>Distribuidor Autorizado De Yanbal</strong></p>
-    <p> Ubicados en: CL 23 A 38 ESTE 16 MZ 2 CA 2 Rincon De La Maria, Villavicencio, Meta</p>
-    <p> WhatsApp: +57 320 835 7694 |  Instagram: @ninoblancaruth</p>
-    <p>&copy; Blanca Niño · <a href="mailto:ana@correo.com">ivanramroruiz02@gmail.com</a></p>
-    <p>&copy; 2026 Todos los derechos reservados.</p>
-  </footer>
+  <footer> <!-- Pie de página inferior con información de contacto y ubicación -->
+    <p><strong>Distribuidor Autorizado De Yanbal</strong></p> <!-- Texto destacado en negrita -->
+    <p> Ubicados en: CL 23 A 38 ESTE 16 MZ 2 CA 2 Rincon De La Maria, Villavicencio, Meta</p> <!-- Dirección física -->
+    <p> WhatsApp: +57 320 835 7694 |  Instagram: @ninoblancaruth</p> <!-- Teléfono y redes sociales -->
+    <p>&copy; Blanca Niño · <a href="mailto:ana@correo.com">ivanramroruiz02@gmail.com</a></p> <!-- Símbolo de copyright (&copy;) y enlace de correo -->
+    <p>&copy; 2026 Todos los derechos reservados.</p> <!-- Aviso legal de derechos reservados -->
+  </footer> <!-- Cierra el pie de página -->
 
    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-  <a href="https://wa.me/573144445281?text=¡Hola!%20Me%20gustaría%20recibir%20más%20información%20sobre%20los%20productos%20de%20Lumea%20Luxury." class="boton-whatsapp-flotante" target="_blank">
+  <a href="https://wa.me/573144445281?text=¡Hola!%20Me%20gustaría%20recibir%20más%20información%20sobre%20los%20productos%20de%20Lumea%20Luxury." class="boton-whatsapp-flotante" target="_blank"> <!-- Botón circular fijo en pantalla que abre chat general de WhatsApp -->
     <!-- Este es el código del ícono de WhatsApp en color blanco -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="white">
-      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.3l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-    </svg>
-  </a>
-</body>
-</html>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="white"> <!-- Gráfico vectorial (SVG) que dibuja el ícono de WhatsApp en blanco sin perder calidad -->
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.3l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/> <!-- Trazo matemático que dibuja la silueta de WhatsApp -->
+    </svg> <!-- Cierra el ícono SVG -->
+  </a> <!-- Cierra el botón flotante -->
+</body> <!-- Cierra el cuerpo de la página -->
+</html> <!-- Cierra el documento HTML -->
