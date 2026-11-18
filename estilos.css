@@ -1,164 +1,164 @@
 /* ========================================================
    CONFIGURACIÓN GENERAL Y LIMPIEZA DE MÁRGENES
    ======================================================== */
-* { 
-  box-sizing: border-box; 
+* { /* El asterisco (*) selecciona absolutamente todos los elementos de la página */
+  box-sizing: border-box; /* Hace que bordes y rellenos no agranden el tamaño total de las cajas */
 }
 
 html {
-  scroll-behavior: smooth; /* Hace que la pantalla se deslice suavemente al pulsar los enlaces */
+  scroll-behavior: smooth; /* Hace que la pantalla se deslice suavemente al pulsar enlaces internos */
 }
 
 
 /* Evita que la pantalla se desborde hacia los lados y da el estilo base a las letras */
 html, body { 
-  margin: 0; 
-  padding: 0;
-  max-width: 100%;
-  overflow-x: hidden;
-  font-family: Arial, sans-serif; 
-  line-height: 1.6; 
-  color: #222; 
+  margin: 0; /* Elimina el margen exterior que traen los navegadores por defecto */
+  padding: 0; /* Elimina el relleno interior por defecto */
+  max-width: 100%; /* Limita el ancho máximo al 100% de la pantalla */
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal para evitar scroll hacia los lados */
+  font-family: Arial, sans-serif; /* Define el tipo de letra principal de toda la web */
+  line-height: 1.6; /* Define el espacio vertical entre líneas de texto para facilitar la lectura */
+  color: #222; /* Pone un gris muy oscuro (casi negro) como color base del texto */
 }
 
 /* Hace que TODAS las imágenes se reduzcan automáticamente al ancho de la pantalla */
 img { 
-  max-width: 100%; 
-  height: auto; 
+  max-width: 100%; /* Impide que una imagen sea más ancha que su contenedor */
+  height: auto; /* Ajusta la altura automáticamente para que la imagen no se deforme */
 }
 
 /* ========================================================
    ENCABEZADO, NAVEGACIÓN Y PIE DE PÁGINA
    ======================================================== */
-header, footer { 
-  background: #ed7004; 
-  color: #fff; 
-  text-align: center; 
-  padding: 15px 16px; 
+header, footer { /* Aplica el mismo estilo tanto al encabezado (header) como al pie de página (footer) */
+  background: #ed7004; /* Pone el color naranja de la marca como fondo */
+  color: #fff; /* Pone el color de letra en blanco */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 15px 16px; /* Da espacio interior arriba/abajo (15px) y a los lados (16px) */
 }
 
 /* Contenedor para alinear los logos a los lados del título */
 .header-contenido {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
+  display: flex; /* Activa Flexbox para acomodar elementos en fila horizontal */
+  justify-content: space-between; /* Empuja los elementos hacia los extremos (logo - título - logo) */
+  align-items: center; /* Centra los logos y el título verticalmente */
+  max-width: 1000px; /* Limita el ancho máximo del encabezado a 1000px */
+  margin: 0 auto; /* Centra todo el bloque horizontalmente en pantallas grandes */
 }
 
 .logo-header {
-  height: 60px;
-  width: auto;
+  height: 60px; /* Fija la altura de los logos en 60 píxeles */
+  width: auto; /* Ajusta el ancho proporcionalmente a la altura */
   border-radius: 8px; /* Esquinas ligeramente redondeadas para los logos */
 }
 
 header h1 {
-  margin: 0;
-  color: white;
-  font-size: 28px;
+  margin: 0; /* Quita el margen por defecto del título principal */
+  color: white; /* Pone el título en color blanco */
+  font-size: 28px; /* Define el tamaño de letra del título en 28px */
 }
 
 nav { 
-  margin-top: 10px; 
+  margin-top: 10px; /* Separa el menú de navegación 10px hacia abajo respecto al título */
 }
 
-nav a { 
-  color: #fff; 
-  margin: 0 10px; 
-  text-decoration: none;
+nav a { /* Da estilo a los enlaces dentro de la barra de navegación */
+  color: #fff; /* Pone las letras de los enlaces en blanco */
+  margin: 0 10px; /* Deja 10px de separación a izquierda y derecha de cada enlace */
+  text-decoration: none; /* Quita la línea de subrayado que traen los enlaces por defecto */
 }
 
-@media (min-width: 700px) { 
-  nav a { margin: 0 18px; } 
+@media (min-width: 700px) { /* Regla que solo se activa en pantallas de 700px de ancho o más (PC/Tablet) */
+  nav a { margin: 0 18px; } /* Aumenta la separación entre enlaces a 18px en pantallas grandes */
 }
 
 /* ========================================================
    ESTRUCTURA PRINCIPAL Y FORMULARIOS
    ======================================================== */
-main { max-width: 800px; margin: 0 auto; padding: 16px; }
-section { margin-bottom: 32px; }
+main { max-width: 800px; margin: 0 auto; padding: 16px; } /* Centra el contenedor principal con ancho máximo de 800px y 16px de relleno */
+section { margin-bottom: 32px; } /* Deja un espacio de separación de 32px debajo de cada sección */
 
-table { border-collapse: collapse; width: 100%; }
-th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-th { background: #eef2fb; }
+table { border-collapse: collapse; width: 100%; } /* Une los bordes de las tablas en una sola línea y ocupa todo el ancho */
+th, td { border: 1px solid #ccc; padding: 8px; text-align: left; } /* Pone borde gris, relleno de 8px y alinea texto a la izquierda en celdas */
+th { background: #eef2fb; } /* Pone un fondo azul claro a los encabezados de tabla */
 
-label { display: block; margin-top: 12px; font-weight: bold; }
-input, textarea { width: 100%; padding: 8px; }
+label { display: block; margin-top: 12px; font-weight: bold; } /* Pone cada etiqueta de formulario en su propia línea, con margen arriba y en negrita */
+input, textarea { width: 100%; padding: 8px; } /* Hace que los campos de texto ocupen el 100% del ancho con 8px de relleno interno */
 
 /* Botón genérico para formularios */
 button { 
-  margin-top: 12px; 
-  padding: 10px 20px; 
-  background: #0b3d91; 
-  color: #fff; 
-  border: 0; 
-  cursor: pointer; 
+  margin-top: 12px; /* Deja espacio arriba del botón */
+  padding: 10px 20px; /* Define el tamaño interior del botón (alto y ancho) */
+  background: #0b3d91; /* Pone color de fondo azul oscuro */
+  color: #fff; /* Pone el texto del botón en blanco */
+  border: 0; /* Quita el borde gris por defecto de los botones */
+  cursor: pointer; /* Cambia la flecha del mouse por una manito al pasar por encima */
 }
 
 
   /* CARRUSEL DE PORTADA (UNA SOLA FOTO A LA VEZ) */
 .carrusel-container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
+  position: relative; /* Sirve de punto de referencia para ubicar elementos internos como los puntos */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 100%; /* Evita que sobrepase el ancho de la pantalla */
   overflow: hidden; /* Oculta estrictamente cualquier imagen de los lados */
-  margin: 0 auto;
+  margin: 0 auto; /* Centra el contenedor */
 }
 
 .carrusel-slides {
-  display: flex;
-  width: 100%;
-  transition: transform 0.6s ease-in-out;
+  display: flex; /* Pone todas las diapositivas una al lado de la otra en fila */
+  width: 100%; /* Ocupa el 100% del contenedor */
+  transition: transform 0.6s ease-in-out; /* Hace que el cambio entre imágenes sea un deslizamiento suave de 0.6 segundos */
 }
 
 .slide {
-  width: 100%;
-  min-width: 100%;
+  width: 100%; /* Ancho total */
+  min-width: 100%; /* Garantiza que no se encoja */
   flex: 0 0 100%; /* Forzar a que cada imagen ocupe exactamente el 100% de la pantalla */
-  position: relative;
-  height: 450px;
+  position: relative; /* Permite que el cuadro de texto flote encima de la imagen */
+  height: 450px; /* Define una altura fija de 450px para el banner */
 }
 
 .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width: 100%; /* La imagen cubre todo el ancho de la diapositiva */
+  height: 100%; /* La imagen cubre todo el alto de la diapositiva */
+  object-fit: cover; /* Rellena todo el espacio sin estirar ni deformar la foto */
+  display: block; /* Elimina pequeños espacios inferiores que dejan las imágenes por defecto */
 }
 
 /* Recuadro flotante en la foto */
 .slide .contenido-portada {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  text-align: center;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px 25px;
-  border-radius: 10px;
-  max-width: 300px;
-  z-index: 5;
+  position: absolute; /* Ubica el recuadro libremente encima de la foto */
+  bottom: 30px; /* Lo separa 30px del borde inferior */
+  left: 30px; /* Lo separa 30px del borde izquierdo */
+  text-align: center; /* Centra el texto dentro del recuadro */
+  color: white; /* Pone las letras en blanco */
+  background-color: rgba(0, 0, 0, 0.7); /* Crea un fondo negro semi-transparente (70% opacidad) */
+  padding: 20px 25px; /* Da espacio interior al recuadro */
+  border-radius: 10px; /* Redondea las esquinas del recuadro */
+  max-width: 300px; /* Limita el ancho máximo a 300px para no tapar toda la foto */
+  z-index: 5; /* Coloca el recuadro en una capa por encima de la imagen */
 }
 
 /* PUNTOS BOTONES PARA CAMBIAR MANUALMENTE */
 .carrusel-puntos {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  z-index: 10;
+  position: absolute; /* Ubica los puntos flotando encima de la parte baja de la foto */
+  bottom: 15px; /* Los separa 15px del borde inferior */
+  width: 100%; /* Ocupa todo el ancho para poder centrarlos */
+  display: flex; /* Alinea los puntos en fila horizontal */
+  justify-content: center; /* Centra los puntos exactamente en el medio */
+  gap: 12px; /* Deja 12px de separación entre cada punto */
+  z-index: 10; /* Asegura que los puntos queden por encima de todo para poder hacerles clic */
 }
 
 .punto {
-  width: 14px;
-  height: 14px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  width: 14px; /* Ancho del círculo */
+  height: 14px; /* Alto del círculo */
+  border: 2px solid white; /* Borde blanco alrededor del círculo */
+  border-radius: 50%; /* Convierte el cuadrado en un círculo perfecto */
+  background-color: rgba(255, 255, 255, 0.3); /* Fondo blanco semi-transparente */
+  cursor: pointer; /* Muestra la manito al pasar el cursor */
+  transition: background-color 0.3s, transform 0.2s; /* Suaviza el cambio de color y tamaño */
 }
 
 .punto:hover {
@@ -166,7 +166,7 @@ button {
 }
 
 .punto.active {
-  background-color: white;
+  background-color: white; /* Rellena de blanco sólido el punto de la foto que se está viendo */
 }
 
 
@@ -205,40 +205,40 @@ button {
 
 /* DISEÑO DEL BOTÓN DE COMPRAR NORMAL */
 .tarjeta-producto button {
-  background-color: #04ff10; 
-  color: white; 
-  border: none; 
-  padding: 10px; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  margin-top: 10px; 
+  background-color: #04ff10; /* Color de fondo verde brillante */
+  color: white; /* Letras en blanco */
+  border: none; /* Sin borde */
+  padding: 10px; /* Relleno interior de 10px */
+  border-radius: 5px; /* Esquinas redondeadas */
+  cursor: pointer; /* Manito al pasar el cursor */
+  margin-top: 10px; /* Separación superior */
 }
 
 /* DISEÑO DEL BOTÓN DE WHATSAPP */
 .tarjeta-producto .boton-comprar {
-  display: inline-block;
+  display: inline-block; /* Permite darle ancho, alto y márgenes como un botón */
   background-color: #25D366; /* Verde característico de WhatsApp */
-  color: white;
-  text-decoration: none; 
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-  font-weight: bold;
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  padding: 10px; /* Espacio interior */
+  border-radius: 5px; /* Esquinas redondeadas */
+  margin-top: 10px; /* Separación respecto al precio o texto de arriba */
+  font-weight: bold; /* Texto en negrita */
 }
 
 /* ========================================================
    DISEÑO DEL BOTÓN PRINCIPAL (VER CATÁLOGO) EN EL INICIO
    ======================================================== */
 .boton-catalogo {
-  display: inline-block;
-  background-color: #e76902; 
-  color: white; 
-  text-decoration: none; 
-  padding: 15px 40px; 
-  border-radius: 8px; 
-  font-size: 20px; 
-  font-weight: bold; 
-  margin-top: 10px; 
+  display: inline-block; /* Permite que el enlace se comporte como un botón con relleno */
+  background-color: #e76902; /* Color naranja de la marca */
+  color: white; /* Letras blancas */
+  text-decoration: none; /* Sin subrayado */
+  padding: 15px 40px; /* Relleno amplio para que sea un botón llamativo */
+  border-radius: 8px; /* Esquinas redondeadas */
+  font-size: 20px; /* Tamaño de letra grande */
+  font-weight: bold; /* Letra en negrita */
+  margin-top: 10px; /* Margen superior */
 }
  /* ========================================================
    BOTÓN FLOTANTE DE WHATSAPP
@@ -248,12 +248,12 @@ button {
   bottom: 20px; /* Distancia desde abajo */
   right: 20px; /* Distancia desde la derecha */
   background-color: #e76902; /* Naranja estilo Yanbal */
-  width: 60px;
-  height: 60px;
+  width: 60px; /* Ancho del botón circular */
+  height: 60px; /* Alto del botón circular */
   border-radius: 50%; /* Lo hace completamente redondo */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Activa Flexbox para centrar el ícono */
+  justify-content: center; /* Centra el ícono horizontalmente */
+  align-items: center; /* Centra el ícono verticalmente */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para que parezca 3D */
   z-index: 1000; /* Asegura que no lo tape ninguna otra imagen */
   transition: transform 0.3s ease; /* Efecto suave */
@@ -261,109 +261,109 @@ button {
 
 /* Animación: se hace un poco más grande al pasar el mouse o tocarlo */
 .boton-whatsapp-flotante:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Aumenta un 10% su tamaño */
 }
 
 /* Tamaño exacto del ícono blanco por dentro */
 .boton-whatsapp-flotante svg {
-  width: 35px;
-  height: 35px;
+  width: 35px; /* Ancho del ícono vectorial */
+  height: 35px; /* Alto del ícono vectorial */
 }
 
 /* ========================================================
    SECCIÓN QUIÉNES SOMOS (TEXTO EN PÁGINA PRINCIPAL)
    ======================================================== */
 .seccion-quienes-somos {
-  background-color: #ffffff;
-  padding: 40px 20px;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 40px 20px; /* Espacio interior amplio arriba/abajo (40px) y lados (20px) */
+  text-align: center; /* Centra los textos */
+  max-width: 900px; /* Limita el ancho máximo a 900px */
+  margin: 0 auto; /* Centra toda la sección en la pantalla */
 }
 
 .seccion-quienes-somos h2 {
   color: #ed7004; /* Naranja de tu marca */
-  font-size: 28px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
+  font-size: 28px; /* Tamaño del subtítulo */
+  margin-bottom: 15px; /* Espacio debajo del título */
+  text-transform: uppercase; /* Convierte todo el texto a MAYÚSCULAS */
 }
 
 .descripcion-quienes-somos {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.8;
-  max-width: 750px;
-  margin: 0 auto 30px auto;
+  font-size: 16px; /* Tamaño de letra cómodo para leer */
+  color: #444; /* Gris oscuro suave */
+  line-height: 1.8; /* Interlineado amplio entre renglones */
+  max-width: 750px; /* Limita el ancho del párrafo para que no sea muy largo */
+  margin: 0 auto 30px auto; /* Centra el párrafo y deja 30px de margen abajo */
 }
 
 .mision-vision-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: flex; /* Pone las tarjetas de Misión y Visión una al lado de la otra */
+  justify-content: center; /* Centra las tarjetas */
+  gap: 20px; /* Espacio de 20px entre Misión y Visión */
+  flex-wrap: wrap; /* Permite que se pongan una debajo de otra en celulares */
 }
 
 .tarjeta-mv {
   background-color: #fdf8f4; /* Fondo crema suave */
-  border-left: 4px solid #ed7004;
-  border-radius: 8px;
-  padding: 20px;
-  flex: 1;
-  min-width: 260px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  text-align: left;
+  border-left: 4px solid #ed7004; /* Línea decorativa naranja gruesa en el borde izquierdo */
+  border-radius: 8px; /* Esquinas redondeadas */
+  padding: 20px; /* Relleno interno */
+  flex: 1; /* Hace que ambas tarjetas ocupen el mismo ancho equitativamente */
+  min-width: 260px; /* Ancho mínimo antes de saltar a la siguiente línea en móvil */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* Sombra muy suave */
+  text-align: left; /* Alinea el texto a la izquierda dentro de cada tarjeta */
 }
 
 .tarjeta-mv h3 {
-  color: #222;
-  margin-top: 0;
-  font-size: 20px;
+  color: #222; /* Título en gris muy oscuro */
+  margin-top: 0; /* Quita margen superior */
+  font-size: 20px; /* Tamaño de letra */
 }
 
 .tarjeta-mv p {
-  color: #555;
-  margin-bottom: 0;
-  font-size: 15px;
+  color: #555; /* Párrafo en gris medio */
+  margin-bottom: 0; /* Quita margen inferior */
+  font-size: 15px; /* Tamaño de letra */
 }
 
 /* ========================================================
    DISEÑO RESPONSIVO (PANTALLAS DE CELULARES)
    ======================================================== */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Todo lo que está aquí adentro solo se aplica en pantallas menores a 768px (celulares) */
   
   /* 1. Mantiene los dos logos a los lados y el título centrado */
   .header-contenido {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100%;
-    padding: 0 5px;
+    display: flex !important; /* Fuerza el diseño horizontal en celular */
+    flex-direction: row !important; /* Mantiene los elementos en fila y no en columna */
+    justify-content: space-between !important; /* Separa logos y título a los extremos */
+    align-items: center !important; /* Centra verticalmente */
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 0 5px; /* Relleno lateral mínimo */
   }
 
   /* Ajusta el tamaño de los logos en celular */
   .logo-header {
-    height: 40px !important; 
-    width: auto !important;
+    height: 40px !important; /* Reduce la altura de los logos de 60px a 40px para que quepan */
+    width: auto !important; /* Mantiene proporción */
   }
 
   /* Ajusta el texto del título en celular */
   header h1 {
-    font-size: 18px !important;
+    font-size: 18px !important; /* Reduce el título de 28px a 18px en móvil */
   }
 
   /* Organiza el menú de navegación para celular */
   nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 10px;
+    display: flex; /* Usa Flexbox para el menú */
+    justify-content: center; /* Centra los enlaces */
+    flex-wrap: wrap; /* Permite que bajen de línea si no caben */
+    gap: 12px; /* Espacio entre enlaces */
+    margin-top: 10px; /* Margen superior */
   }
 
   nav a {
-    font-size: 14px;
-    margin: 0;
+    font-size: 14px; /* Letra ligeramente más pequeña en móvil */
+    margin: 0; /* Quita márgenes laterales extra */
   }
 
 /* 2. Ajuste de la portada en celular */
@@ -380,16 +380,17 @@ button {
 
   .contenido-portada h2 {
     font-size: 17px !important; /* Título más pequeño para no ocupar tantas líneas */
-    margin-top: 0 !important;
-    margin-bottom: 6px !important;
+    margin-top: 0 !important; /* Quita margen arriba */
+    margin-bottom: 6px !important; /* Reduce margen abajo */
   }
 
   .contenido-portada p {
     font-size: 12px !important; /* Texto explicativo compacto */
-    margin-bottom: 10px !important;
+    margin-bottom: 10px !important; /* Margen inferior */
   }
 
   .boton-catalogo {
     font-size: 13px !important; /* Botón ajustado a pantallas móviles */
-    padding: 8px 14px !important;
+    padding: 8px 14px !important; /* Relleno compacto del botón */
   }
+   
